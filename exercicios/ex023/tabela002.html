@@ -13,6 +13,7 @@
         table {
             width: 500px;
             border-collapse: collapse;
+            position: relative;
         }
 
         td, th {
@@ -23,7 +24,14 @@
         thead, tfoot {
             background-color:gray;
             color: white;
+            
+        }
 
+   
+        thead > tr > th {
+            position: sticky;
+            top: 0;
+            background-color: #383838;
         }
 
         caption {
@@ -33,6 +41,13 @@
             background-color: lightgray;
         }
             
+        tbody > tr:nth-child(2n) {
+            background-color: lightgrey;
+        }
+
+        td.num {
+            text-align: right;
+        }
     </style>
 </head>
 <body>
@@ -60,15 +75,15 @@
         <tbody>
             <tr>
                 <td>São Paulo</td>
-                <td>45 929 049</td>
+                <td class="num">45 929 049</td>
             </tr>
             <tr>
                 <td>Minas Gerais</td>
-                <td>21 168 791</td>
+                <td class="num">21 168 791</td>
             </tr>
             <tr>
                 <td>Rio de Janeiro</td>
-                <td>17 264 943</td>
+                <td class="num">17 264 943</td>
             </tr>
         </tbody>
         <tfoot> 
@@ -76,5 +91,7 @@
             <td>0000</td>
         </tfoot>
     </table>
+
+    <!-- N fiz toda a tabela mas da de entender o cod kk-->
 </body>
 </html>
